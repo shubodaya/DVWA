@@ -29,28 +29,38 @@ In this repo, you’ll find a detailed walkthrough of how I manually tested and 
 
 ---
 
-## 📚 Vulnerabilities Covered
+## 📚 Vulnerabilities Covered (OWASP Top 10 – 2021)
 
-1. **SQL Injection**  
-   - Used SQL payloads to bypass login and extract data  
-2. **Cross-Site Scripting (XSS)**  
-   - Injected malicious scripts in input fields and saw them executed  
-3. **Broken Authentication**  
-   - Manipulated sessions and login flow  
-4. **Insecure Direct Object References (IDOR)**  
-   - Accessed restricted resources by changing URL parameters  
-5. **Security Misconfiguration**  
-   - Exploited default settings and weak configurations  
-6. **Sensitive Data Exposure**  
-   - Captured sensitive info sent over unprotected channels  
-7. **Broken Access Control**  
-   - Escalated privileges and accessed admin functionality  
-8. **Cross-Site Request Forgery (CSRF)**  
-   - Triggered actions via forged requests  
-9. **Using Components with Known Vulnerabilities**  
-   - Identified outdated PHP modules and packages  
-10. **Insufficient Logging & Monitoring**  
-   - Simulated attacks that went undetected
+1. **A01:2021 – Broken Access Control**  
+   - Accessed unauthorized pages, escalated privileges, and bypassed restrictions via IDOR and direct URL manipulation.
+
+2. **A02:2021 – Cryptographic Failures** *(formerly Sensitive Data Exposure)*  
+   - Intercepted credentials and sensitive information sent over HTTP without encryption.
+
+3. **A03:2021 – Injection**  
+   - Performed SQL Injection using crafted payloads to bypass login and extract database content.
+
+4. **A04:2021 – Insecure Design**  
+   - Explored weak security design patterns like lack of input validation and no secure defaults.
+
+5. **A05:2021 – Security Misconfiguration**  
+   - Exploited default credentials, unnecessary services, and verbose error messages.
+
+6. **A06:2021 – Vulnerable and Outdated Components**  
+   - Identified old PHP versions and insecure software packages used in the DVWA environment.
+
+7. **A07:2021 – Identification and Authentication Failures** *(formerly Broken Authentication)*  
+   - Bypassed login via brute-force and session manipulation using Burp Suite Intruder.
+
+8. **A08:2021 – Software and Data Integrity Failures** *(partially covered)*  
+   - Simulated risks from using components without verifying integrity (e.g., no signature validation).
+
+9. **A09:2021 – Security Logging and Monitoring Failures**  
+   - Executed various attacks without triggering any alerts or logs from the system.
+
+10. **A10:2021 – Server-Side Request Forgery (SSRF)** *(manually tested if DVWA was extended)*  
+   - Tested simulated scenarios where the application could be tricked into making internal requests.
+
 
 ---
 
