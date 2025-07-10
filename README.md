@@ -83,7 +83,6 @@ Screenshots of each exploit and attack flow are included in the `/screenshots` f
 
 Next phase: Implementing a **Web Application Firewall (WAF)** to defend against these attacks and analyzing its effectiveness.
 
-Stay tuned.
 
 ---
 
